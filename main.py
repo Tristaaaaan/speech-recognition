@@ -9,7 +9,7 @@ import openai
 if platform == "android":
     from android.permissions import request_permissions, Permission
     request_permissions([Permission.INTERNET, Permission.RECORD_AUDIO])
-    
+
 Builder.load_string('''
 #:import stt Speechrecognizer.stt
 
@@ -76,7 +76,7 @@ class SpeechApp(App):
 
     def build(self):
         return SpeechInterface()
-                
+
     def on_pause(self):
         return True
 
